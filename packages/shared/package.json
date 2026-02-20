@@ -9,6 +9,7 @@
     "build": "tsc --project tsconfig.json"
   },
   "devDependencies": {
+    "@trading-cup/config": "workspace:*",
     "typescript": "^5.7.0"
   }
 }
