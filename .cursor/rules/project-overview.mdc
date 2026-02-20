@@ -1,0 +1,36 @@
+---
+description: Trading Cup プロジェクト概要（kazulife9127）
+alwaysApply: true
+---
+
+# Trading Cup プロジェクト
+
+**開発者**: kazulife9127
+**リポジトリ**: https://github.com/kazulife9127/Trading-Cup
+
+## 技術スタック
+
+| レイヤー | 技術 |
+|---------|------|
+| User フロントエンド | Next.js 14, TailwindCSS, wagmi, RainbowKit |
+| Admin フロントエンド | Next.js 14, TailwindCSS, Firebase Auth |
+| バックエンド API | NestJS 10, Firebase Admin SDK |
+| データベース | Firestore |
+| モノレポ | Turborepo + pnpm |
+
+## ディレクトリ構成
+
+- `apps/user` - User向け Next.js (port 3000)
+- `apps/admin` - Admin向け Next.js (port 3002)
+- `apps/api` - NestJS API (port 3001)
+- `packages/shared` - 共通型定義
+- `packages/ui` - 共通UIコンポーネント
+- `packages/config` - TSConfig, ESLint設定
+
+## コマンド
+
+- `pnpm dev` - 全アプリ起動
+- `pnpm --filter @trading-cup/user dev` - User のみ
+- `pnpm --filter @trading-cup/admin dev` - Admin のみ
+- `pnpm --filter @trading-cup/api dev` - API のみ
+- `pnpm lint` / `pnpm format` - リント・フォーマット
